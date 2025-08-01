@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise 🎁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <h1>A Sweet Surprise 🎉</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="love-letter.html">Love Letter</a>
+            <a href="surprise.html">Surprise</a>
+            <a href="secret-note.html">Secret Note</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Click for a Magical Surprise</h2>
+        <button onclick="showSurprise()">🎁 Reveal Surprise</button>
+
+        <div id="surpriseContent" style="display:none; margin-top:20px;">
+            <p>You are my favorite person in the whole world! 💕</p>
+            <img src="her-photo.jpg" alt="My Love" class="gf-photo" style="margin-top:10px;">
+            <video controls width="100%" style="margin-top:15px; border-radius:10px;">
+                <source src="surprise-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer>Made with ❤️ by Steve</footer>
+
+    <audio id="surpriseSound" src="surprise-sound.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+    <script>
+        function showSurprise() {
+            const content = document.getElementById('surpriseContent');
+            const sound = document.getElementById('surpriseSound');
+            content.style.display = "block";
+            sound.play();
+            triggerSurpriseEffects();
+        }
+    </script>
+</body>
+</html>
